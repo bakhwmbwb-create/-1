@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+.reads-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    padding: 12px 20px;
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 50px;
+    border: 1px solid #e2d7c5;
+    max-width: 900px;
+}
+
+/* شكل الزر الأساسي */
+.read-btn {
+    background: linear-gradient(135deg, #ffffff, #fcf8f2);
+    color: #6b1414; /* عنابي */
+    border: 2px solid #d4af37; /* ذهبي */
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+/* عند مرور الماوس */
+.read-btn:hover {
+    background: #d4af37;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(214, 175, 55, 0.3);
+}
+@media (max-width: 768px) {
+    .reads-filter {
+        border-radius: 20px;
+        gap: 8px;
+        padding: 10px;
+    }
+    .read-btn {
+        flex: 1 1 40%;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <a href="reads.html" class="read-btn">العوده</a>
+    <div class="reads-filter">
+        
+ <a href="الاناجيل1.html" class="read-btn">من الهيكل الكبير الي الملاك غبريال</a> 
+     <a href="الاناجيل2.html" class="read-btn">من الملاك ميخائيل الي الرسل</a>
+         <a href="الاناجيل3.html" class="read-btn">من الشهداء الي الباب البحري</a>
+             <a href="الاناجيل 4.html" class="read-btn">من الباب الغربي الي يوحنا المعمدان</a>
+        
+    </div>
+</body>
+</html>

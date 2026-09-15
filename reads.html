@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطقوس والألحان والرموز الكنسية | عيد الصليب المجيد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* حاوية الأزرار */
+.reads-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    padding: 12px 20px;
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 50px;
+    border: 1px solid #e2d7c5;
+    max-width: 900px;
+}
+
+/* شكل الزر الأساسي */
+.read-btn {
+    background: linear-gradient(135deg, #ffffff, #fcf8f2);
+    color: #6b1414; /* عنابي */
+    border: 2px solid #d4af37; /* ذهبي */
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+/* عند مرور الماوس */
+.read-btn:hover {
+    background: #d4af37;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(214, 175, 55, 0.3);
+}
+
+/* الزر النشط / المختار */
+.read-btn.active {
+    background: linear-gradient(135deg, #6b1414, #4a0d0d);
+    color: #d4af37;
+    border-color: #d4af37;
+    box-shadow: 0 4px 12px rgba(107, 20, 20, 0.3);
+}
+
+/* الشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+    .reads-filter {
+        border-radius: 20px;
+        gap: 8px;
+        padding: 10px;
+    }
+    .read-btn {
+        flex: 1 1 40%;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+    </style>
+    </head>
+    <body> 
+        <button id="N" class="read-btn">العوده</button>
+        <div class="reads-filter">
+            <button id="aA" class="read-btn">العشيه</button>
+    <button id="A" class="read-btn active">الاناجيل</button>
+    <button id="B" class="read-btn"> البولس</button>
+    <button id="F" class="read-btn"> الكاثوليكون</button>
+    <button id="C" class="read-btn">الابركسيس</button>
+    <button id="D" class="read-btn">السنكسار</button>
+    <button id="V" class="read-btn">انجيل القداس</button>
+</div>
+
+
+
+
+
+
+<script src="script.js" > </script>
+    </body>
+</html>

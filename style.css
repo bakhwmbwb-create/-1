@@ -1,0 +1,241 @@
+/* Custom CSS Properties */
+:root {
+    --primary: #6b1414;      /* أحمر عنابي كنسي */
+    --primary-dark: #4a0d0d;
+    --gold: #d4af37;         /* ذهبي ملكي */
+    --gold-hover: #f3cf55;
+    --bg-light: #fcfaf7;     /* بيج دافئ راقٍ */
+    --card-bg: #ffffff;
+    --text-dark: #2b2b2b;
+    --text-light: #666666;
+    --white: #ffffff;
+    --border-color: #e2d7c5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.9;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    color: var(--gold);
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--gold);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Hero Banners */
+.hero-header {
+    background: linear-gradient(rgba(74, 13, 13, 0.85), rgba(43, 43, 43, 0.85)),
+                radial-gradient(circle at center, var(--gold) 1px, transparent 1px);
+    background-size: cover, 20px 20px;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-header h1 {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.hero-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #eaeaea;
+}
+
+/* Page Layout Container */
+.container {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Grid & Cards Systems */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h2, .card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Scripture & Quotes Styling */
+.verse-box {
+    background-color: #f4ede2;
+    border-right: 5px solid var(--gold);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--primary-dark);
+}
+
+.quote-card {
+    background-color: var(--white);
+    border-left: 4px solid var(--primary);
+    border-right: 4px solid var(--gold);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+.quote-author {
+    display: block;
+    text-align: left;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* Buttons & Links */
+.btn-gold {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--primary-dark);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+    border-top: 3px solid var(--gold);
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    .hero-header h1 {
+        font-size: 2.2rem;
+    }
+}
+button{
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--primary-dark);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+button:hover{
+background-color: var(--gold-hover);
+    transform: translateY(-2px);
+
+
+}
